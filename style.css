@@ -1,0 +1,72 @@
+
+        body {
+            background: linear-gradient(to bottom,lch(33.52 53.76 125.8), lch(55.97% 31.99 250.73) );
+            margin: 0;
+            padding: 0px;
+            font-family: cursive;
+        }
+        header {
+          font-size: 20px;
+            position: fixed;
+            background-color: rgb(8, 71, 33);
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 35px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: lch(100% 0.01 296.81);
+            padding: 10px 50px;
+            text-decoration: none;
+        }
+.main-content {
+      padding: 120px 20px 20px; 
+            justify-content: center;
+           
+}
+ .main-content h1 {
+              color: white;
+            }
+.cuadros {
+    background-color: #efefef;
+            border: 10px solid #3ea16e;
+            border-radius: 10px;
+            border-style: groove;
+            padding: 5px;
+            width: 300px;
+            margin: 10px;
+}
+.cuadros img {
+     width: 100%;
+            height: auto;
+            margin-bottom: 0px;
+}
+.contenedor-fotos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.seccion-favs {
+  font-size: larger;
+  width: 100%;
+  height: auto;
+ margin-bottom: 0px;
+}
+
+.seccion-juntos {
+font-size: larger;
+  width: 100%;
+  height: auto;
+ margin-bottom: 0px;
+}
+.seccion-cositas {
+  font-size: larger;
+  width: 100%;
+  height: auto;
+ margin-bottom: 0px;
+}
