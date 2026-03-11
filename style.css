@@ -1,86 +1,110 @@
-/* @media only screen and (max-width: 500px) {
-      div {
-        width: 40px;
-        height: 40px;
-      }
-    } */
-        body {
-            background: linear-gradient(to bottom,lch(33.52 53.76 125.8), lch(55.97% 31.99 250.73) );
-            margin: 0;
-            padding: 0px;
-            font-family: cursive;
-        }
-        header {
-          font-size: 20px;
-            position: fixed;
-            background-color: rgb(8, 71, 33);
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 35px 0;
-            text-align: center;
-            z-index: 1000;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: lch(100% 0.01 296.81);
-            padding: 10px 50px;
-            text-decoration: none;
-        }
-.main-content {
-      padding: 120px 20px 20px; 
-            justify-content: center;
-           
+/* EFECTO DE SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
 }
- .main-content h1 {
-              color: white;
-            }
+
+body {
+    background: linear-gradient(to bottom, lch(33.52 53.76 125.8), lch(55.97% 31.99 250.73));
+    margin: 0;
+    padding: 0px;
+    font-family: cursive;
+}
+
+header {
+    font-size: 20px;
+    position: fixed;
+    background-color: rgb(8, 71, 33);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: lch(100% 0.01 296.81);
+    padding: 10px 30px; /* Ajustado para que la raya se vea mejor */
+    text-decoration: none;
+    position: relative; /* Necesario para la raya */
+    transition: color 0.3s ease;
+}
+
+/* ANIMACIÓN DE LA RAYA BAJO LAS PALABRAS */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #3ea16e;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 70%; /* La raya crece al 70% del tamaño de la palabra */
+}
+
+nav a:hover {
+    color: #3ea16e;
+}
+
+.main-content {
+    padding: 150px 20px 20px; /* Aumenté el padding superior para que no tape el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Margen para que al navegar no se tape el título con el header */
+section {
+    scroll-margin-top: 140px;
+    width: 100%;
+}
+
 .cuadros {
     background-color: #efefef;
-            border: 10px solid #3ea16e;
-            border-radius: 10px;
-            border-style: groove;
-            padding: 5px;
-            width: 300px;
-            margin: 10px;
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           
-         &.cuadros:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-  }
+    border: 10px solid #3ea16e;
+    border-radius: 10px;
+    border-style: groove;
+    padding: 15px; /* Un poco más de aire adentro */
+    width: 300px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.cuadros:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
 .cuadros img {
-     width: 100%;
-            height: auto;
-            margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
+
 .contenedor-fotos {
-  display: flex;
-  flex-wrap: wrap;
-}
-.seccion-favs {
-  font-size: larger;
-  width: 100%;
-  height: auto;
- margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las fotos si sobran espacios */
 }
 
-.seccion-juntos {
-font-size: larger;
-  width: 100%;
-  height: auto;
- margin-bottom: 0px;
+/* Estilos de secciones */
+.seccion-favs, .seccion-juntos, .seccion-cositas {
+    font-size: larger;
+    margin-bottom: 50px; /* Espacio entre secciones */
 }
-.seccion-cositas {
-  font-size: larger;
-  width: 100%;
-  height: auto;
- margin-bottom: 0px;
-}
-/*Me falta trabajar en las páginas de cada sección
-Agregar los videos de fondo para al menos una seeción*/
-
