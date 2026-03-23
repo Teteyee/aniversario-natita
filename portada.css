@@ -1,0 +1,35 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(to bottom,rgb(28, 47, 74), lch(55.97% 31.99 250.73));
+    margin: 0;
+    padding: 0px;
+    font-family: cursive; 
+}
+body a {
+    color: lch(62.21 43.45 199.21);
+    text-decoration: none;
+}
+header {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    background-color: rgb(28, 47, 74);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 180px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.3;
+}
