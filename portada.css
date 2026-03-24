@@ -1,35 +1,121 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    background: linear-gradient(to bottom,rgb(28, 47, 74), lch(55.97% 31.99 250.73));
+    background: linear-gradient(to bottom, rgb(28, 47, 74), lch(55.97% 31.99 250.73));
     margin: 0;
-    padding: 0px;
-    font-family: cursive; 
-}
-body a {
-    color: lch(62.21 43.45 199.21);
-    text-decoration: none;
-}
-header {
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
     color: white;
-    font-size: 20px;
-    position: fixed;
-    background-color: rgb(28, 47, 74);
+    overflow-x: hidden;
+}
+
+/* --- ESTILO DEL VIDEO HERO --- */
+header.hero {
+    position: relative;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    text-align: center;
+}
+
+.video-fondo {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 180px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    height: 100%;
+    object-fit: cover;
+    /* Ajustamos para que baje un poco el video y se vea su cara */
+    object-position: 50% 15%; 
+    z-index: 1;
+    opacity: 0.5;
 }
-header video {
+
+.contenido-hero {
+    position: relative;
+    z-index: 2; 
+}
+
+.contenido-hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+    animation: aparecer 1.5s ease-out;
+}
+
+/* --- SECCIÓN DE TEXTO --- */
+.explicacion {
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- CONTENEDOR DEL BOTÓN GOOEY --- */
+.centrar {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.goo-wrapper {
+    filter: url('#gooey'); /* Llama al filtro del HTML */
+    position: relative;
+    display: inline-block;
+}
+
+.boton {
+    position: relative;
+    z-index: 5;
+    background-color: rgb(40, 67, 105);
+    border: 5px solid rgb(40, 45, 105);
+    border-radius: 40px;
+    transition: all 0.4s ease;
+}
+
+.boton a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 18px 60px;
+}
+
+/* La burbuja que se "derrite" con el botón */
+.bubble {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.3;
+    width: 120%;
+    height: 120%;
+    background-color: rgb(40, 37, 105);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+}
+
+/* --- EFECTO HOVER --- */
+.goo-wrapper:hover .bubble {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.goo-wrapper:hover .boton {
+    background-color:  lch(55.97% 31.99 250.73);
+    transform: scale(1.1);
+    box-shadow: 0 0 30px  black;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
