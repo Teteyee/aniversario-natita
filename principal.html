@@ -8,10 +8,12 @@
 <body>
     <header>
         <nav>
+            <a href="portada.html"> ← </a>
             <a href="#inicio"> Inicio</a>
             <a href="#favs">Favs</a>
             <a href="#juntos"> Juntos</a>
             <a href="#cositas"> Cositaaas</a>
+
         </nav>
     </header>
 
@@ -273,5 +275,78 @@
             </div>
         </section>
     </div>
+    <audio id="miMusica" autoplay>
+    <source id="fuenteMusica" src="iwonder.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio, avisame si te sucede esto.
+</audio>
+<script>
+    var musica = document.getElementById("miMusica");
+    var fuente = document.getElementById("fuenteMusica");
+
+    var playlist = [
+        "cancion1.mp3", // Esta sonará a 0.95
+        "cas.ogg", // Esta y las demás a 1.0
+        "idea22.ogg",
+         "futile.ogg" 
+    ];
+    
+    var indiceActual = 0;
+
+    function aplicarVelocidad() {
+        // Si es la primera canción (índice 0), bajamos la velocidad
+        if (indiceActual === 0) {
+            musica.playbackRate = 0.95;
+            console.log("Velocidad especial: 0.95");
+        } else {
+            // Para todas las demás, velocidad normal
+            musica.playbackRate = 1.0;
+            console.log("Velocidad normal: 1.0");
+        }
+    }
+
+    function empezarMusica() {
+        fuente.src = playlist[indiceActual];
+        
+        musica.play().then(function() {
+            aplicarVelocidad(); // Aplicamos la regla de velocidad
+            removerEventos();
+        }).catch(function(error) {
+            console.log("Esperando interacción...");
+        });
+    }
+
+    musica.onended = function() {
+        indiceActual++; 
+
+        if (indiceActual >= playlist.length) {
+            indiceActual = 0; 
+        }
+
+        fuente.src = playlist[indiceActual];
+        musica.load(); 
+        
+        // Esperamos un momento a que cargue y aplicamos velocidad según el índice
+        setTimeout(function() {
+            musica.play();
+            aplicarVelocidad(); 
+        }, 100);
+    };
+
+    // Este seguro es por si ella pausa y sigue, que no se resetee la velocidad sola
+    musica.onplay = function() {
+        aplicarVelocidad();
+    };
+
+    function removerEventos() {
+        document.removeEventListener('click', empezarMusica);
+        document.removeEventListener('touchstart', empezarMusica);
+        document.removeEventListener('wheel', empezarMusica);
+    }
+
+    document.addEventListener('click', empezarMusica);
+    document.addEventListener('touchstart', empezarMusica);
+    document.addEventListener('wheel', empezarMusica);
+</script>
+      
 </body>
 </html>
