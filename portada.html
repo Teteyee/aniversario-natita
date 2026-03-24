@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLAAA</title>
+    <title>BIENVENIDA</title>
     <link rel="stylesheet" href="portada.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-    <video src="Videonat/Videonat.mp4"></video>
-        <h1>BIENVENIDAAAAAAA!!</h1>
+
+    <header class="hero">
+        <video autoplay loop muted playsinline class="video-fondo">
+            <source src="Videonat/Videonat.mp4" type="video/mp4">
+        </video>
+        
+        <div class="contenido-hero">
+            <h1>¡BIENVENIDAAAAAAA! ♡</h1>
+        </div>
     </header>
 
+    <div class="explicacion">
+        <h2>Holaaaaaaaaa</h2>
+        <p>Poooor fiiiin podrás ver en lo que he estado trabajando durante hace bastante tiempo, quise darte algo que puedas disfrutar cada vez que quieras, te recomiendo subir el volumen y tratar de pasar el mouse por donde sea para que veas las animaciones que añadí, pensé en hacer este regalo porque ya traía la idea de hacer como una galeria de fotos en algo, algún regalo en físico quizás, porque es nuestro aniversario y quería recordar todo lo especial que hemos vivido juntos a través de memorias y qué mejor manera de hacerlo que "a mi manera" programando una página sólo para ti haciendo la galeria de fotos con detalles únicos, además de esta manera no tengo ningún límite físico como en la caja de tu cumpleaños que te di, no tenía mucho espacio para escribir y aquí he podido explicar cada foto, decir porqué está ahí y escribir lo recordaba de esa foto y decir por qué me gusta, ha sido bastante difícil todo porque he tenido que aprender a hacer todo desde 0 y mientras aprendía fue cuando dije que si haría el regalo porque se pueden hacer cosas bien padres y era un poco abrumador porque no sabía como iba a quedar y además porque me quedaba un largo camino por aprender de css y mientras aprendía cosas decía cosas así como de "esto lo tengo que añadir si o si", me rompí muchas veces la cabeza pensando en por qué no funcionaba algo, de verdad que si es dificil hacer que tooodo funcione, cada detalle tiene que porque sino todo truena y mientras la iba haciendo se me iban ocurriendo más y más cosas que harían que quede mejor todo pero espero que te gusteeeeee y me contarás la experiencia de como la fuiste viendo y que ibas pensando si.</p>
+        <p>(Aunque eso si, para el siguiente link, te recomiendo ver la página como a un 75% de zoom jiji)</p>
+
+        <div class="centrar">
+            <div class="goo-wrapper">
+                <div class="bubble"></div>
+                <div class="boton">
+                    <a href="principal.html">VAMOOOOOOOOOOS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooey" />
+                <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
 
 </body>
 </html>
