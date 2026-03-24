@@ -25,12 +25,12 @@
             <div class="cuadros">
                 <img src="Perisur/Perisur2.jpeg" alt="Natalia en japón">
                 <h3>Selfiee</h3>
-                <p>Por algo de lo que recuerdo este día es por esta foto, ya estábamos conectando mucho y ya nos haciamos fotos así, recuerdo como cuando volví a cch les enseñaba esa foto como en señal de progreso y me decian uyyyy</p>
+                <p>Por algo de lo que recuerdo este día es por esta foto, ya estábamos conectando mucho y ya nos hacíamos fotos así, recuerdo como cuando volví a cch les enseñaba esa foto como en señal de progreso y me decian uyyyy</p>
                  </div>
                 <div class="cuadros">
                 <img src="Perisur/Perisur4.jpeg" alt="Natalia en japón">
                 <h3>Más fotitoos</h3>
-                <p>Es que estoy bastante seguros de que estas empezaban a ser nuestras primeras fotos juntos, selfies, fotos al otro, que bonito </p>
+                <p>Es que estoy bastante seguro de que estas empezaban a ser nuestras primeras fotos juntos, selfies, fotos al otro, que bonito </p>
             </div>
                     
             <div class="cuadros">
@@ -41,10 +41,37 @@
             <div class="cuadros">
                 <img src="Perisur/Perisur3.jpeg" alt="Natalia en japón">
                 <h3>Una variante</h3>
-                <p>Esta foto igual me gusta mucho y taaaaaampooooco me dejabas subirla o ponermela de foto de perfil, asi es la gente pelada</p>
+                <p>Esta foto igual me gusta mucho y taaaaaampooooco me dejabas subirla o ponermela de foto de perfil, así es la gente pelada</p>
             </div>
         </div>
     </section>
+
+    <audio id="miMusica" autoplay loop>
+    <source src="sunsetz.ogg" type="audio/ogg">
+    Tu navegador no soporta el audio.
+</audio>
+
+    <script>
+    var musica = document.getElementById("miMusica");
+
+    function empezarMusica() {
+        musica.play().then(function() {
+            console.log("Música sonando!");
+            removerEventos();
+        }).catch(function(error) {
+            console.log("Esperando interacción...");
+        });
+    }
+
+    function removerEventos() {
+        document.removeEventListener('click', empezarMusica);
+        document.removeEventListener('touchstart', empezarMusica);
+        document.removeEventListener('wheel', empezarMusica);
+    }
+    document.addEventListener('click', empezarMusica);
+    document.addEventListener('touchstart', empezarMusica);
+    document.addEventListener('wheel', empezarMusica);
+</script>
 </div>
 </body>
 </html>
