@@ -9,7 +9,10 @@ body {
     padding: 0px;
     font-family: cursive;
 }
-
+body a {
+    color: lch(62.21 43.45 199.21);
+    text-decoration: none;
+}
 header {
     font-size: 20px;
     position: fixed;
@@ -30,13 +33,12 @@ nav {
 
 nav a {
     color: lch(100% 0.01 296.81);
-    padding: 10px 30px; /* Ajustado para que la raya se vea mejor */
+    padding: 10px 30px; 
     text-decoration: none;
-    position: relative; /* Necesario para la raya */
+    position: relative; 
     transition: color 0.3s ease;
 }
 
-/* ANIMACIÓN DE LA RAYA BAJO LAS PALABRAS */
 nav a::after {
     content: '';
     position: absolute;
