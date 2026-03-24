@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedida</title>
+    <link rel="stylesheet" href="personalizadas.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="principal.html"> Volver al inicio</a>
+        </nav>
+    </header>
+    <div class="main-content" id="inicio">
+    <section class="seccion-favs" id="favs">
+        <div class="contenedor-fotos">
+            <div class="cuadros">
+                <img src="pedida/carta.jpeg" alt="Natalia en japón">
+                <h3>La carta</h3>
+                <p>No tengo muchas fotos de este día, más que nada son recuerdos, realmente no sabía cómo hacerlo, pero de a poco se me iban ocurriendo ideas, fueron bastantes intentos de esta carta porque no me cabía todo lo que quería decir y tenía que volver a empezar y ya que estuviera bien, pegar el dibujo de la foto de perisur pooorque me gusta mucho y en ese entonces era de las pocas fotos que teníamos</p>
+            </div>
+            <div class="cuadros">
+                <img src="pedida/Rey.jpeg" alt="Natalia en japón">
+                <h3>Nuestras figuras</h3>
+                <p>jajaja me da risa como planee todo, pero como no sabía cómo era el foamy moldeable, mi idea del gato era difícil para mi, y en lugar de hacerlo yo, lo hiciste tu mientras yo hacía al Rey Helado jaja, esa hoja que tiene, es la original, aún tiene su porro, fue bastante bonito ese día, en esos pastos haciendo figuritas con música de fondo y esperando el momento para decirte, con esta música de fondo que ósea justo salió esa y era perfecta y ahiii va la naquis a poner Álvaro Díaz</p>
+            </div>
+            <div class="cuadros">
+                <img src="pedida/tomando.jpeg" alt="Natalia en japón">
+                <h3>Despuesito</h3>
+                <p>Aquí ya es comiendo después de haberlo hecho y que dijeras que siiiiiiiiiii, yujuuuuuuu, te acuerdas de como a lado habían dos tipas que nos miraban raro, ya desde el momento 1 nos miraban eh, porque somos la sensación, nos tienen envidia obvio y así será siempree, espero que te haya gustado este regalo, es una recopilación de toooooodo lo que hemos pasado durante este increíble año, gracias por todo, por ser tu, estoy emocionado por todo lo que nos falta por vivir prque estoy seguro de que serán cosass increiiiiibles MUUUUUUUUUUAAAAAAA</p>
+            </div>
+        </div>
+</section>
+<audio id="miMusica" autoplay loop>
+    <source src="Sky.ogg" type="audio/ogg">
+    Tu navegador no soporta el audio.
+</audio>
+
+<script>
+    var musica = document.getElementById("miMusica");
+
+    function empezarMusica() {
+        musica.play().then(function() {
+            console.log("Música sonando!");
+            removerEventos();
+        }).catch(function(error) {
+            console.log("Esperando interacción...");
+        });
+    }
+
+    function removerEventos() {
+        document.removeEventListener('click', empezarMusica);
+        document.removeEventListener('touchstart', empezarMusica);
+        document.removeEventListener('wheel', empezarMusica);
+    }
+    document.addEventListener('click', empezarMusica);
+    document.addEventListener('touchstart', empezarMusica);
+    document.addEventListener('wheel', empezarMusica);
+</script>
+
+</div>
+</body>
+</html>
