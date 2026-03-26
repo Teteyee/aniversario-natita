@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- ESTILO DEL VIDEO HERO --- */
+/* --- ESTILO DEL VIDEO --- */
 header.hero {
     position: relative;
     height: 100vh; 
@@ -100,7 +100,6 @@ header.hero {
     z-index: -1;
 }
 
-/* --- EFECTO HOVER --- */
 .goo-wrapper:hover .bubble {
     transform: translate(-50%, -50%) scale(1);
 }

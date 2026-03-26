@@ -33,13 +33,12 @@ nav {
 
 nav a {
     color: lch(100% 0.01 296.81);
-    padding: 10px 30px; /* Ajustado para que la raya se vea mejor */
+    padding: 10px 30px; 
     text-decoration: none;
-    position: relative; /* Necesario para la raya */
+    position: relative; 
     transition: color 0.3s ease;
 }
 
-/* ANIMACIÓN DE LA RAYA BAJO LAS PALABRAS */
 nav a::after {
     content: '';
     position: absolute;
@@ -53,7 +52,7 @@ nav a::after {
 }
 
 nav a:hover::after {
-    width: 70%; /* La raya crece al 70% del tamaño de la palabra */
+    width: 70%; 
 }
 
 nav a:hover {
@@ -61,7 +60,7 @@ nav a:hover {
 }
 
 .main-content {
-    padding: 150px 5% 50px; /* Mucho espacio arriba para el header */
+    padding: 150px 5% 50px; 
 }
 
 .seccion-favs h1 {
@@ -74,42 +73,38 @@ nav a:hover {
 .contenedor-fotos {
     display: flex;
     flex-direction: column;
-    gap: 100px; /* Espacio grande entre cada recuerdo */
+    gap: 100px; 
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* REDISEÑO DE LOS CUADROS A ESTILO STORYTELLING */
 .cuadros {
-    display: flex; /* Alinea foto y texto de lado a lado */
+    display: flex; 
     align-items: center;
-    background: transparent; /* Quitamos el fondo gris para que sea más elegante */
-    border: none; /* Quitamos el borde original */
+    background: transparent; 
+    border: none; 
     width: 100%;
     margin: 0;
     padding: 0;
-    transition: none; /* Quitamos la transición vieja */
+    transition: none;
 }
 
-/* Alternar orden: Fotos a la derecha en los pares */
 .cuadros:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-/* Estilo de la FOTO (Grande y Protagonista) */
 .cuadros img {
-    flex: 1; /* La foto ocupa más espacio */
-    width: 45%; /* Tamaño pro */
-    height: 450px; /* Altura fija para uniformidad */
-    object-fit: cover; /* Para que no se deforme */
+    flex: 1; 
+    width: 45%;
+    height: 450px; 
+    object-fit: cover; 
     border-radius: 20px;
     border: 5px solid #3ea16e;
     box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    filter: brightness(0.8); /* Un poco oscura hasta que pases el mouse */
+    filter: brightness(0.8); 
 }
 
-/* Estilo del TEXTO (A la derecha/izquierda) */
 .cuadros h3, .cuadros p {
     flex: 1.2;
     padding: 0 50px;
@@ -128,14 +123,12 @@ nav a:hover {
     color: #efefef;
 }
 
-/* ANIMACIÓN DE HOVER SORPRESA (REVELACIÓN) */
 .cuadros:hover img {
-    transform: scale(1.05) rotate(2deg); /* Crece y se inclina */
-    filter: brightness(1.1) saturate(1.2); /* Se ilumina y cobra color */
-    box-shadow: 0 20px 50px rgba(62, 161, 110, 0.5); /* Brillo verde intenso */
+    transform: scale(1.05) rotate(2deg); 
+    filter: brightness(1.1) saturate(1.2); 
+    box-shadow: 0 20px 50px rgba(62, 161, 110, 0.5); 
 }
 
-/* Responsive para celulares */
 @media (max-width: 768px) {
     .cuadros, .cuadros:nth-child(even) {
         flex-direction: column;
