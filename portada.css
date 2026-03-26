@@ -29,7 +29,6 @@ header.hero {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ajustamos para que baje un poco el video y se vea su cara */
     object-position: 50% 15%; 
     z-index: 1;
     opacity: 0.5;
@@ -47,7 +46,6 @@ header.hero {
     animation: aparecer 1.5s ease-out;
 }
 
-/* --- SECCIÓN DE TEXTO --- */
 .explicacion {
     padding: 100px 20px;
     max-width: 800px;
@@ -60,14 +58,13 @@ header.hero {
     align-items: center;
 }
 
-/* --- CONTENEDOR DEL BOTÓN GOOEY --- */
 .centrar {
     margin-top: 60px;
     margin-bottom: 80px;
 }
 
 .goo-wrapper {
-    filter: url('#gooey'); /* Llama al filtro del HTML */
+    filter: url('#gooey'); 
     position: relative;
     display: inline-block;
 }
@@ -90,14 +87,13 @@ header.hero {
     padding: 18px 60px;
 }
 
-/* La burbuja que se "derrite" con el botón */
 .bubble {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 120%;
     height: 120%;
-    background-color: rgb(40, 37, 105);
+    background-color: lch(39.21 90.55 243.59);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -110,9 +106,10 @@ header.hero {
 }
 
 .goo-wrapper:hover .boton {
-    background-color:  lch(55.97% 31.99 250.73);
+    border-color:  lch(39.21 90.55 243.59);
+    background-color:  lch(39.21 90.55 243.59);
     transform: scale(1.1);
-    box-shadow: 0 0 30px  black;
+    box-shadow: 0 0 30px lch(39.21 90.55 243.59);
 }
 
 @keyframes aparecer {
