@@ -378,7 +378,7 @@
     var indiceActual = 0;
 
     function aplicarVelocidad() {
-        // Si es la primera canción (índice 0), bajamos la velocidad
+        
         if (indiceActual === 0) {
             musica.playbackRate = 0.95;
             console.log("Velocidad especial: 0.95");
@@ -393,7 +393,7 @@
         fuente.src = playlist[indiceActual];
         
         musica.play().then(function() {
-            aplicarVelocidad(); // Aplicamos la regla de velocidad
+            aplicarVelocidad(); 
             removerEventos();
         }).catch(function(error) {
             console.log("Esperando interacción...");
@@ -410,14 +410,14 @@
         fuente.src = playlist[indiceActual];
         musica.load(); 
         
-        // Esperamos un momento a que cargue y aplicamos velocidad según el índice
+
         setTimeout(function() {
             musica.play();
             aplicarVelocidad(); 
         }, 100);
     };
 
-    // Este seguro es por si ella pausa y sigue, que no se resetee la velocidad sola
+
     musica.onplay = function() {
         aplicarVelocidad();
     };
