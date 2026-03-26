@@ -1,4 +1,3 @@
-/* EFECTO DE SCROLL SUAVE */
 html {
     scroll-behavior: smooth;
 }
@@ -52,7 +51,7 @@ nav a::after {
 }
 
 nav a:hover::after {
-    width: 70%; /* La raya crece al 70% del tamaño de la palabra */
+    width: 70%; 
 }
 
 nav a:hover {
@@ -60,7 +59,7 @@ nav a:hover {
 }
 
 .main-content {
-    padding: 150px 20px 20px; /* Aumenté el padding superior para que no tape el contenido */
+    padding: 150px 20px 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +70,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* Margen para que al navegar no se tape el título con el header */
 section {
     scroll-margin-top: 140px;
     width: 100%;
@@ -82,7 +80,7 @@ section {
     border: 10px solid #3ea16e;
     border-radius: 10px;
     border-style: groove;
-    padding: 15px; /* Un poco más de aire adentro */
+    padding: 15px; 
     width: 300px;
     margin: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -102,11 +100,10 @@ section {
 .contenedor-fotos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra las fotos si sobran espacios */
+    justify-content: center; 
 }
 
-/* Estilos de secciones */
 .seccion-favs, .seccion-juntos, .seccion-cositas {
     font-size: larger;
-    margin-bottom: 50px; /* Espacio entre secciones */
+    margin-bottom: 50px; 
 }
