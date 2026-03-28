@@ -117,20 +117,34 @@ header.hero {
 }
 /* --- AJUSTES PARA CELULARES --- */
 @media (max-width: 480px) {
-    .contenido-hero h1 {
-        font-size: 2.5rem; 
-        
-        line-height: 1.1;
-        
-        padding: 0 15px;
-        
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    header.hero {
 
-        margin-top: 20px;
+        height: 100dvh; 
+        width: 100vw; 
     }
 
     .video-fondo {
-
+        height: 100dvh;
+        width: 100vw;
+        object-fit: cover;
         object-position: 50% 30%; 
+    }
+
+    .contenido-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .contenido-hero h1 {
+        font-size: 2.5rem; 
+        line-height: 1.1;
+        padding: 0 15px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        text-align: center;
+        margin-top: 20px;
     }
 }
