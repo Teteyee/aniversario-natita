@@ -6,7 +6,7 @@ body {
     background: linear-gradient(to bottom, lch(33.52 53.76 125.8), lch(55.97% 31.99 250.73));
     margin: 0;
     padding: 0px;
-    font-family: cursive;
+    font-family: 'Comic Neue', sans-serif;
 }
 body a {
     color: lch(62.21 43.45 199.21);
