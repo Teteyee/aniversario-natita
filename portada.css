@@ -115,3 +115,30 @@ header.hero {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* --- AJUSTES PARA CELULARES --- */
+@media (max-width: 768px) {
+    header.hero {
+        height: 80vh; 
+    }
+
+    .video-fondo {
+        object-position: 50% 20%; 
+        opacity: 0.6;
+    }
+
+    .contenido-hero h1 {
+        font-size: 2.2rem; 
+        padding: 0 20px;
+        line-height: 1.2;
+    }
+
+    .explicacion {
+        padding: 60px 25px;
+        font-size: 18px; 
+    }
+    
+    .boton a {
+        padding: 12px 35px;
+        font-size: 18px;
+    }
+}
